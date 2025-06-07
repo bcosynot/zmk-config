@@ -10,20 +10,20 @@
 
 / {
     behaviors {
-        meta_action: meta_action {
-            compatible = "zmk,behavior-tap-dance";
-            label = "META_ACTION";
-            #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&kp LG(SPACE)>;
-        };
-
-        meta_hyper: meta_hyper {
+        tap_hold: tap_hold {
             compatible = "zmk,behavior-hold-tap";
-            label = "META_HYPER";
-            bindings = <&kp>, <&meta_action>;
+            label = "TAP_HOLD";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+        };
+
+        w_esc: w_esc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "W_ESC";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp ESC>;
         };
     };
 
@@ -39,10 +39,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F                               &kp P  &kp G        &kp J    &kp L  &kp U      &kp Y    &kp SEMICOLON  &kp BSPC
-&kp LCTRL  &kp A  &kp R  &kp S                               &kp T  &kp D        &kp H    &kp N  &kp E      &kp I    &kp O          &kp MINUS
-&kp LSHFT  &kp Z  &kp X  &kp C                               &kp V  &kp B        &kp K    &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp ESC
-                         &meta_hyper LC(LA(LS(LEFT_GUI))) 0  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&none  &kp Q                 &w_esc                &tap_hold LC(LS(LA(LEFT_GUI))) F  &kp P              &kp G    &kp J  &kp L              &tap_hold LC(LA(LG(SPACE))) LG(U)  &kp Y                  &kp SEMICOLON     &none
+&none  &tap_hold LEFT_GUI A  &tap_hold LEFT_ALT R  &tap_hold LEFT_SHIFT S            &tap_hold LCTRL T  &kp D    &kp H  &tap_hold RCTRL N  &tap_hold RIGHT_SHIFT E            &tap_hold RIGHT_ALT I  &tap_hold RGUI O  &none
+&none  &kp Z                 &kp X                 &kp C                             &kp V              &kp B    &kp K  &kp M              &kp COMMA                          &kp DOT                &kp FSLH          &none
+                                                   &tap_hold LEFT_GUI LG(SPACE)      &kp SPACE          &mo 1    &mo 2  &kp ENTER          &kp RALT
             >;
         };
 
@@ -55,10 +55,10 @@
 
             display-name = "Lower";
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&none  &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
+&none  &bt BT_CLR    &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
+                                   &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
             >;
         };
 
@@ -71,10 +71,10 @@
 
             display-name = "Raise";
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&none  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &none
+&none  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &none
+&none  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &none
+                         &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
             >;
         };
 
