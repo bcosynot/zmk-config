@@ -9,6 +9,24 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        meta_action: meta_action {
+            compatible = "zmk,behavior-tap-dance";
+            label = "META_ACTION";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&kp LG(SPACE)>;
+        };
+
+        meta_hyper: meta_hyper {
+            compatible = "zmk,behavior-hold-tap";
+            label = "META_HYPER";
+            bindings = <&kp>, <&meta_action>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -21,10 +39,10 @@
 
             display-name = "Base";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp F     &kp P  &kp G        &kp J    &kp L  &kp U      &kp Y    &kp SEMICOLON  &kp BSPC
-&kp LCTRL  &kp A  &kp R  &kp S     &kp T  &kp D        &kp H    &kp N  &kp E      &kp I    &kp O          &kp MINUS
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp K    &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&kp TAB    &kp Q  &kp W  &kp F                               &kp P  &kp G        &kp J    &kp L  &kp U      &kp Y    &kp SEMICOLON  &kp BSPC
+&kp LCTRL  &kp A  &kp R  &kp S                               &kp T  &kp D        &kp H    &kp N  &kp E      &kp I    &kp O          &kp MINUS
+&kp LSHFT  &kp Z  &kp X  &kp C                               &kp V  &kp B        &kp K    &kp M  &kp COMMA  &kp DOT  &kp FSLH       &kp ESC
+                         &meta_hyper LC(LA(LS(LEFT_GUI))) 0  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
             >;
         };
 
