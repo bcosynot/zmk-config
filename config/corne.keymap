@@ -27,6 +27,30 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        w_f_esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 3>;
+        };
+
+        l_u_bkspc {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <7 8>;
+        };
+
+        u_y_del {
+            bindings = <&kp DEL>;
+            key-positions = <7 8>;
+        };
+
+        q_a_at {
+            bindings = <&kp AT>;
+            key-positions = <1 13>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
