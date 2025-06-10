@@ -83,22 +83,22 @@
         d_b_tile {
             bindings = <&kp TILDE>;
             key-positions = <17 29>;
-        }
+        };
 
         j_h_caret {
             bindings = <&kp CARET>;
             key-positions = <6 18>;
-        }
+        };
 
         h_k_underscore {
             bindings = <&kp UNDERSCORE>;
             key-positions = <18 30>;
-        }
+        };
 
         l_n_plus {
             bindings = <&kp PLUS>;
             key-positions = <7 19>;
-        }
+        };
 
         n_m_minus {
             bindings = <&kp MINUS>;
@@ -108,42 +108,42 @@
         l_u_bkspc {
             bindings = <&kp BACKSPACE>;
             key-positions = <7 8>;
-        }
+        };
 
         u_y_del {
             bindings = <&kp DEL>;
             key-positions = <8 9>;
-        }
+        };
 
         y_i_ampersand {
             bindings = <&kp AMPERSAND>;
             key-positions = <9 21>;
-        }
+        };
 
         i_period_pipe {
             bindings = <&kp PIPE>;
             key-positions = <21 33>;
-        }
+        };
 
         n_e_openparen_lt {
             bindings = <&tap_hold LESS_THAN LEFT_PARENTHESIS>;
             key-positions = <19 20>;
-        }
+        };
 
         n_e_closeparen_gt {
             bindings = <&tap_hold GREATER_THAN RIGHT_PARENTHESIS>;
             key-positions = <19 20>;
-        }
+        };
 
         m_comma_curlyparen_squareparen_open {
             bindings = <&tap_hold LEFT_BRACKET LEFT_BRACE>;
             key-positions = <31 32>;
-        }
+        };
 
         comma_period_curlyparen_squareparen_close {
             bindings = <&tap_hold RIGHT_BRACKET RIGHT_BRACE>;
             key-positions = <32 33>;
-        }
+        };
     };
 
     keymap {
