@@ -35,19 +35,49 @@
             key-positions = <2 3>;
         };
 
-        l_u_bkspc {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <7 8>;
-        };
-
-        u_y_del {
-            bindings = <&kp DEL>;
-            key-positions = <7 8>;
-        };
-
-        q_a_at {
+        w_r_at {
             bindings = <&kp AT>;
-            key-positions = <1 13>;
+            key-positions = <2 14>;
+        };
+
+        r_s_tab {
+            bindings = <&kp TAB>;
+            key-positions = <14 15>;
+        };
+
+        r_x_backtick {
+            bindings = <&kp GRAVE>;
+            key-positions = <14 26>;
+        };
+
+        x_c_copy {
+            bindings = <&kp LG(C)>;
+            key-positions = <26 27>;
+        };
+
+        c_v_paste {
+            bindings = <&kp LG(V)>;
+            key-positions = <27 28>;
+        };
+
+        v_t_equal {
+            bindings = <&kp LG(EQUAL)>;
+            key-positions = <28 16>;
+        };
+
+        p_t_dollar {
+            bindings = <&kp LG(DOLLAR)>;
+            key-positions = <16 4>;
+        };
+
+        z_v_cut {
+            bindings = <&kp LG(X)>;
+            key-positions = <27 25>;
+        };
+
+        g_d_percent {
+            bindings = <&kp PERCENT>;
+            key-positions = <17 5>;
         };
     };
 
