@@ -158,9 +158,9 @@
 
             display-name = "Base";
             bindings = <
-&none  &kp Q                 &w_esc                &tap_hold LC(LS(LA(LEFT_GUI))) F  &kp P              &kp G    &kp J  &kp L              &tap_hold LC(LA(LG(SPACE))) LG(U)  &kp Y                  &kp SEMICOLON     &none
-&none  &tap_hold LEFT_GUI A  &tap_hold LEFT_ALT R  &tap_hold LEFT_SHIFT S            &tap_hold LCTRL T  &kp D    &kp H  &tap_hold RCTRL N  &tap_hold RIGHT_SHIFT E            &tap_hold RIGHT_ALT I  &tap_hold RGUI O  &none
-&none  &kp Z                 &kp X                 &kp C                             &kp V              &kp B    &kp K  &kp M              &kp COMMA                          &kp DOT                &kp FSLH          &none
+&none  &kp Q                 &w_esc                &tap_hold LC(LS(LA(LEFT_GUI))) F  &kp P              &kp G    &kp J  &kp L              &tap_hold LC(LA(LG(SPACE))) U  &kp Y                  &kp SEMICOLON     &none
+&none  &tap_hold LEFT_GUI A  &tap_hold LEFT_ALT R  &tap_hold LEFT_SHIFT S            &tap_hold LCTRL T  &kp D    &kp H  &tap_hold RCTRL N  &tap_hold RIGHT_SHIFT E        &tap_hold RIGHT_ALT I  &tap_hold RGUI O  &none
+&none  &kp Z                 &kp X                 &kp C                             &kp V              &kp B    &kp K  &kp M              &kp COMMA                      &kp DOT                &kp FSLH          &none
                                                    &tap_hold LEFT_GUI LG(SPACE)      &kp SPACE          &mo 1    &mo 2  &kp ENTER          &kp RALT
             >;
         };
