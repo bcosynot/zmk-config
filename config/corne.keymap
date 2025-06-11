@@ -103,7 +103,7 @@
         n_m_minus {
             bindings = <&kp MINUS>;
             key-positions = <19 31>;
-        }
+        };
 
         l_u_bkspc {
             bindings = <&kp BACKSPACE>;
