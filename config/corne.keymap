@@ -87,12 +87,12 @@
         };
 
         v_t_equal {
-            bindings = <&kp LG(EQUAL)>;
+            bindings = <&kp EQUAL>;
             key-positions = <28 16>;
         };
 
         p_t_dollar {
-            bindings = <&kp LG(DOLLAR)>;
+            bindings = <&kp DOLLAR>;
             key-positions = <16 4>;
         };
 
@@ -194,10 +194,10 @@
 
             display-name = "Base";
             bindings = <
-&none  &kp Q            &w_esc           &tap_hold LC(LS(LA(LEFT_GUI))) F  &kp P         &kp G    &kp J  &kp L         &tap_hold LC(LA(LG(SPACE))) U  &kp Y             &kp SEMICOLON  &none
-&none  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_SHIFT S                 &hml LCTRL T  &kp D    &kp H  &hmr RCTRL N  &hmr RIGHT_SHIFT E             &hmr RIGHT_ALT I  &hmr RGUI O    &none
-&none  &kp Z            &kp X            &kp C                             &kp V         &kp B    &kp K  &kp M         &kp COMMA                      &kp DOT           &kp FSLH       &none
-                                         &tap_hold LEFT_GUI LG(SPACE)      &kp SPACE     &mo 1    &mo 2  &kp ENTER     &kp RALT
+&none  &kp Q            &w_esc           &hml LC(LS(LA(LEFT_GUI))) F   &kp P         &kp G    &kp J  &kp L         &hmr RC(RS(RA(RIGHT_GUI))) U  &kp Y             &kp SEMICOLON  &none
+&none  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_SHIFT S             &hml LCTRL T  &kp D    &kp H  &hmr RCTRL N  &hmr RIGHT_SHIFT E            &hmr RIGHT_ALT I  &hmr RGUI O    &none
+&none  &kp Z            &kp X            &kp C                         &kp V         &kp B    &kp K  &kp M         &kp COMMA                     &kp DOT           &kp FSLH       &none
+                                         &tap_hold LEFT_GUI LG(SPACE)  &kp SPACE     &mo 1    &mo 2  &kp ENTER     &kp RALT
             >;
         };
 
