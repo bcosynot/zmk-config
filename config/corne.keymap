@@ -173,12 +173,12 @@
 
         u_e_star {
             bindings = <&kp STAR>;
-            key-positions = <9 21>;
+            key-positions = <8 20>;
         };
 
         e_comma_slash {
             bindings = <&kp SLASH>;
-            key-positions = <21 33>;
+            key-positions = <20 32>;
         };
     };
 
