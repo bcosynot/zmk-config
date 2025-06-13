@@ -34,9 +34,11 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 39 40 41>; // Right side keys
             hold-trigger-on-release;
         };
+
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -45,6 +47,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 36 37 38>; // Left side keys
             hold-trigger-on-release;
         };
@@ -167,6 +170,16 @@
             bindings = <&tap_hold RIGHT_BRACKET RIGHT_BRACE>;
             key-positions = <32 33>;
         };
+
+        u_e_star {
+            bindings = <&kp STAR>;
+            key-positions = <9 21>;
+        };
+
+        e_comma_slash {
+            bindings = <&kp SLASH>;
+            key-positions = <21 33>;
+        };
     };
 
     keymap {
@@ -181,10 +194,10 @@
 
             display-name = "Base";
             bindings = <
-&none  &kp Q                 &w_esc                &tap_hold LC(LS(LA(LEFT_GUI))) F  &kp P              &kp G    &kp J  &kp L              &tap_hold LC(LA(LG(SPACE))) U  &kp Y                  &kp SEMICOLON     &none
-&none  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_SHIFT S  &hml LCTRL T  &kp D    &kp H  &hmr RCTRL N  &hmr RIGHT_SHIFT E  &hmr RIGHT_ALT I  &hmr RGUI O  &none
-&none  &kp Z                 &kp X                 &kp C                             &kp V              &kp B    &kp K  &kp M              &kp COMMA                      &kp DOT                &kp FSLH          &none
-                                                   &tap_hold LEFT_GUI LG(SPACE)      &kp SPACE          &mo 1    &mo 2  &kp ENTER          &kp RALT
+&none  &kp Q            &w_esc           &tap_hold LC(LS(LA(LEFT_GUI))) F  &kp P         &kp G    &kp J  &kp L         &tap_hold LC(LA(LG(SPACE))) U  &kp Y             &kp SEMICOLON  &none
+&none  &hml LEFT_GUI A  &hml LEFT_ALT R  &hml LEFT_SHIFT S                 &hml LCTRL T  &kp D    &kp H  &hmr RCTRL N  &hmr RIGHT_SHIFT E             &hmr RIGHT_ALT I  &hmr RGUI O    &none
+&none  &kp Z            &kp X            &kp C                             &kp V         &kp B    &kp K  &kp M         &kp COMMA                      &kp DOT           &kp FSLH       &none
+                                         &tap_hold LEFT_GUI LG(SPACE)      &kp SPACE     &mo 1    &mo 2  &kp ENTER     &kp RALT
             >;
         };
 
