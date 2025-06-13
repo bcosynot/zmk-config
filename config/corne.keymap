@@ -156,9 +156,9 @@
             key-positions = <19 20>;
         };
 
-        n_e_closeparen_gt {
+        e_i_closeparen_gt {
             bindings = <&tap_hold GREATER_THAN RIGHT_PARENTHESIS>;
-            key-positions = <19 20>;
+            key-positions = <20 21>;
         };
 
         m_comma_curlyparen_squareparen_open {
