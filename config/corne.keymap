@@ -180,6 +180,11 @@
             bindings = <&kp SLASH>;
             key-positions = <20 32>;
         };
+
+        s_c_quote {
+            bindings = <&tap_hold DOUBLE_QUOTES SINGLE_QUOTE>;
+            key-positions = <15 27>;
+        };
     };
 
     keymap {
