@@ -1,5 +1,7 @@
 draw_config:
-  separate_combo_diagrams: true
+  separate_combo_diagrams: false
+  key_w: 72
+  key_h: 66
 
 parse_config:
   raw_binding_map:

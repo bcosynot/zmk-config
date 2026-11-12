@@ -183,6 +183,14 @@
             bindings = <&tap_hold DOUBLE_QUOTES SINGLE_QUOTE>;
             key-positions = <15 27>;
         };
+
+        // herdr prefix (Ctrl+B). Idle guard + short window so rolling "bv" mid-word doesn't fire it.
+        v_b_herdr_prefix {
+            bindings = <&kp LC(B)>;
+            key-positions = <28 29>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+        };
     };
 
     keymap {
