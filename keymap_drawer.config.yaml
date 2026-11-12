@@ -1,0 +1,6 @@
+draw_config:
+  separate_combo_diagrams: true
+
+parse_config:
+  raw_binding_map:
+    "&w_esc": "W / 2x ESC"

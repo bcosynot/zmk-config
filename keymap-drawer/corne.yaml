@@ -1,0 +1,184 @@
+layout: {zmk_keyboard: corne}
+layers:
+  Base:
+  - ''
+  - Q
+  - W / 2x ESC
+  - {t: F, h: Meh+LEFT GUI}
+  - P
+  - G
+  - J
+  - L
+  - {t: U, h: Ctl+Sft+AltGr+RIGHT GUI}
+  - Y
+  - ;
+  - ''
+  - ''
+  - {t: A, h: LEFT GUI}
+  - {t: R, h: LEFT ALT}
+  - {t: S, h: LEFT SHIFT}
+  - {t: T, h: LCTRL}
+  - D
+  - H
+  - {t: N, h: RCTRL}
+  - {t: E, h: RIGHT SHIFT}
+  - {t: I, h: RIGHT ALT}
+  - {t: O, h: RGUI}
+  - ''
+  - ''
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - K
+  - M
+  - ','
+  - .
+  - /
+  - ''
+  - {t: Gui+SPACE, h: LEFT GUI}
+  - SPACE
+  - Lower
+  - Raise
+  - ENTER
+  - RALT
+  Lower:
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - ''
+  - ''
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - BT CLR
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LGUI
+  - {t: ▽, type: trans}
+  - {t: SPACE, type: held}
+  - RET
+  - {t: ▽, type: trans}
+  - RALT
+  Raise:
+  - ''
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - KP MULTIPLY
+  - (
+  - )
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '-'
+  - '='
+  - '['
+  - ']'
+  - \
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - _
+  - +
+  - '{'
+  - '}'
+  - '|'
+  - ''
+  - LGUI
+  - {t: ▽, type: trans}
+  - SPACE
+  - {t: RET, type: held}
+  - {t: ▽, type: trans}
+  - RALT
+combos:
+- p: [2, 3]
+  k: ESCAPE
+- p: [2, 14]
+  k: '@'
+- p: [14, 15]
+  k: TAB
+- p: [14, 26]
+  k: '`'
+- p: [26, 27]
+  k: Gui+C
+- p: [27, 28]
+  k: Gui+V
+- p: [28, 16]
+  k: '='
+- p: [16, 4]
+  k: $
+- p: [27, 25]
+  k: Gui+X
+- p: [17, 5]
+  k: '%'
+- p: [17, 29]
+  k: '~'
+- p: [6, 18]
+  k: ^
+- p: [18, 30]
+  k: _
+- p: [7, 19]
+  k: +
+- p: [19, 31]
+  k: '-'
+- p: [7, 8]
+  k: BACKSPACE
+- p: [8, 9]
+  k: DEL
+- p: [9, 21]
+  k: '&'
+- p: [21, 33]
+  k: '|'
+- p: [19, 20]
+  k: {t: (, h: <}
+- p: [20, 21]
+  k: {t: ), h: '>'}
+- p: [31, 32]
+  k: {t: '{', h: '['}
+- p: [32, 33]
+  k: {t: '}', h: ']'}
+- p: [8, 20]
+  k: '*'
+- p: [20, 32]
+  k: /
+- p: [15, 27]
+  k: {t: '''', h: '"'}
