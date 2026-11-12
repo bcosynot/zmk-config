@@ -12,7 +12,6 @@
     behaviors {
         tap_hold: tap_hold {
             compatible = "zmk,behavior-hold-tap";
-            label = "TAP_HOLD";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
@@ -21,7 +20,6 @@
 
         w_esc: w_esc {
             compatible = "zmk,behavior-tap-dance";
-            label = "W_ESC";
             #binding-cells = <0>;
             bindings = <&kp W>, <&kp ESC>;
         };
