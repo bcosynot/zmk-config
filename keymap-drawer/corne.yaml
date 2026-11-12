@@ -3,7 +3,7 @@ layers:
   Base:
   - ''
   - Q
-  - W / 2x ESC
+  - W
   - {t: F, h: Meh+LEFT GUI}
   - P
   - G
@@ -57,11 +57,11 @@ layers:
   - '0'
   - ''
   - ''
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - LEFT
   - DOWN
   - UP
@@ -69,7 +69,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
-  - BT CLR
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -82,8 +82,8 @@ layers:
   - {t: ▽, type: trans}
   - LGUI
   - {t: ▽, type: trans}
-  - {t: SPACE, type: held}
-  - RET
+  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - RALT
   Raise:
@@ -95,7 +95,7 @@ layers:
   - '%'
   - ^
   - '&'
-  - KP MULTIPLY
+  - '*'
   - (
   - )
   - ''
@@ -125,10 +125,53 @@ layers:
   - ''
   - LGUI
   - {t: ▽, type: trans}
-  - SPACE
-  - {t: RET, type: held}
+  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - RALT
+  Adjust:
+  - Boot
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Boot
+  - Reset
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Reset
+  - ''
+  - BT CLR
+  - ''
+  - ''
+  - ''
+  - BT CLR ALL
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
 combos:
 - l: [Base]
   p: [2, 3]
@@ -208,6 +251,9 @@ combos:
 - l: [Base]
   p: [15, 27]
   k: {t: '''', h: '"'}
+- l: [Base]
+  p: [25, 26]
+  k: Caps Word
 - l: [Base]
   p: [28, 29]
   k: Ctl+B

@@ -5,4 +5,6 @@ draw_config:
 
 parse_config:
   raw_binding_map:
-    "&w_esc": "W / 2x ESC"
+    "&caps_word": "Caps Word"
+    "&bootloader": "Boot"
+    "&sys_reset": "Reset"
