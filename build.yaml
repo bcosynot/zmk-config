@@ -1,22 +1,7 @@
-# This file generates the GitHub Actions matrix
-# For simple board + shield combinations, add them
-# to the top level board and shield arrays, for more
-# control, add individual board + shield combinations to
-# the `include` property, e.g:
-#
-# board: [ "nice_nano//zmk" ]
-# shield: [ "corne_left", "corne_right" ]
-# include:
-#   - board: bdn9_rev2
-#   - board: nice_nano//zmk
-#     shield: reviung41
-#
+# DEBUG BRANCH: left half only, zmk-nice-oled + USB logging.
+# Do not merge into colemak.
 ---
 include:
   - board: nice_nano//zmk
     shield: corne_left nice_view_adapter nice_epaper
-    snippet: studio-rpc-usb-uart
-  - board: nice_nano//zmk
-    shield: corne_right nice_view_adapter nice_epaper
-  - board: nice_nano//zmk
-    shield: settings_reset
+    snippet: zmk-usb-logging
