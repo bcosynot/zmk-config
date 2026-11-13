@@ -13,10 +13,5 @@ manifest:
     - name: zmk-nice-oled
       remote: osoc
       revision: v0.1.3
-    # Required by zmk-nice-oled: without it the screen redraws every display
-    # tick forever, starving key handling on the central half.
-    - name: zmk-intelli-keypress-events
-      remote: osoc
-      revision: v0.0.1
   self:
     path: config
