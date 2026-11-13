@@ -1,28 +1,25 @@
 # DEBUG BRANCH: left half only, zmk-nice-oled bisect. Do not merge into colemak.
 # Command-line -DCONFIG_* values override config/corne.conf.
+# Previous round: C (all optional central widgets off) still hung; deferred
+# logging printed nothing, suggesting the default-priority log thread starves.
 ---
 include:
-  # A: everything as in 0e85c49, but logs printed immediately from the calling
-  #    thread, so a starved log thread can't swallow them.
+  # D: settings as in 0e85c49; log thread made cooperative (-2), above the
+  #    system workqueue, so it runs even if something preemptible hogs the CPU.
   - board: nice_nano//zmk
     shield: corne_left nice_view_adapter nice_epaper
     snippet: zmk-usb-logging
-    cmake-args: -DCONFIG_LOG_MODE_IMMEDIATE=y
-    artifact-name: A-immediate-log
-  # B: same, minus the WPM widget (Bongo Cat animation on the left screen).
-  - board: nice_nano//zmk
-    shield: corne_left nice_view_adapter nice_epaper
-    cmake-args: -DCONFIG_NICE_OLED_WIDGET_WPM=n
-    artifact-name: B-no-wpm
-  # C: minimal left screen: no WPM, HID/caps indicators, modifier indicators,
-  #    peripheral battery fetch or battery smoothing.
-  - board: nice_nano//zmk
-    shield: corne_left nice_view_adapter nice_epaper
     cmake-args: >-
-      -DCONFIG_NICE_OLED_WIDGET_WPM=n
-      -DCONFIG_NICE_OLED_WIDGET_HID_INDICATORS=n
-      -DCONFIG_NICE_OLED_WIDGET_CAPS_LOCK_WITH_SHIFT_CENTRAL=n
-      -DCONFIG_NICE_OLED_WIDGET_MODIFIERS_INDICATORS=n
-      -DCONFIG_NICE_OLED_WIDGET_CENTRAL_SHOW_BATTERY_PERIPHERAL_AND_CENTRAL=n
-      -DCONFIG_NICE_OLED_BATTERY_SMOOTHING=n
-    artifact-name: C-minimal
+      -DCONFIG_LOG_PROCESS_THREAD_CUSTOM_PRIORITY=y
+      -DCONFIG_LOG_PROCESS_THREAD_PRIORITY=-2
+    artifact-name: D-log-high-prio
+  # E: same as D, plus the display thread dropped to the lowest preemptible
+  #    priority. If keys work here, the display thread is the one spinning.
+  - board: nice_nano//zmk
+    shield: corne_left nice_view_adapter nice_epaper
+    snippet: zmk-usb-logging
+    cmake-args: >-
+      -DCONFIG_LOG_PROCESS_THREAD_CUSTOM_PRIORITY=y
+      -DCONFIG_LOG_PROCESS_THREAD_PRIORITY=-2
+      -DCONFIG_ZMK_DISPLAY_DEDICATED_THREAD_PRIORITY=14
+    artifact-name: E-display-low-prio
